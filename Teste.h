@@ -1,12 +1,12 @@
-#ifndef _COISA_H_
-#define _COISA_H_
+#ifndef _TESTE_H_
+#define _TESTE_H_
 
-class Coisa{
+class Teste{
       private:
               int atributo;
       public:
-              Coisa(){atributo=0;}
-              ~Coisa(){}
+              Teste(){atributo=0;}
+              ~Teste(){}
               void set_atributo(int a)
               {
                   atributo=a;
