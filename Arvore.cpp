@@ -1,46 +1,82 @@
 #include "Arvore.h"
-
+#include <queue>
 void Arvore::print_tree()
 {
+
     if(raiz!=NULL)
     {
-        //IMPRESSÃO DAS CELULAS
-        if(raiz->get_pmenor()==NULL && raiz->get_pmaior()==NULL)
-            cout << endl << "Raiz: " << raiz->get_patual()->get_atributo() << "  FE: -1" << "  FD: -1";
-        else if(raiz->get_pmaior()==NULL)
-            cout << endl << "Raiz: " << raiz->get_patual()->get_atributo() << "  FE: " << raiz->get_pmenor()->get_patual()->get_atributo() << "  FD: -1";
-        else if(raiz->get_pmenor()==NULL)
-            cout << endl << "Raiz: " << raiz->get_patual()->get_atributo() << "  FE: -1" << "  FD: " << raiz->get_pmaior()->get_patual()->get_atributo();
-        else
-            cout << endl << "Raiz: " << raiz->get_patual()->get_atributo() << "  FE: " << raiz->get_pmenor()->get_patual()->get_atributo() << "  FD: " << raiz->get_pmaior()->get_patual()->get_atributo();
-
+        tam = 1;
         if(raiz->get_pmenor()!=NULL)
-            percorrer_preordem(raiz->get_pmenor());
+            contar_arvore(raiz->get_pmenor());
 
         if(raiz->get_pmaior()!=NULL)
-            percorrer_preordem(raiz->get_pmaior());
+            contar_arvore(raiz->get_pmaior());
+
+
     }
     else
-        cout << endl << "RAIZ: -1" << endl;
+    {
+        cout << endl << "Arvore Vazia." << endl;
+    }
+    int i;
+    Node vetor[tam];
+    for(i=0;i<tam;i++)
+    {
+        vetor[i] =
+    }
+
+}
+void Arvore::contar_arvore(Node* subraiz)
+{
+            tam++;
+            if(subraiz->get_pmenor()!=NULL)
+            {
+            tam++;
+            }
+            if(subraiz->get_pmaior()!=NULL)
+            {
+            tam++;
+            }
+
+    //PERCORRER OS DEMAIS EM PRÃ‰-ORDEM
+    if(subraiz->get_pmenor()!=NULL)
+        contar_arvore(subraiz->get_pmenor());
+    if(subraiz->get_pmaior()!=NULL)
+        contar_arvore(subraiz->get_pmaior());
 }
 
 void Arvore::percorrer_preordem(Node* subraiz)
 {
-    //IMPRESSÃO DAS CELULAS
-    if(subraiz->get_pmenor()==NULL && subraiz->get_pmaior()==NULL)
-        cout << endl << "No: " << subraiz->get_patual()->get_atributo() << "  FE: -1" << "  FD: -1";
-    else if(subraiz->get_pmaior()==NULL)
-        cout << endl << "No: " << subraiz->get_patual()->get_atributo() << "  FE: " << subraiz->get_pmenor()->get_patual()->get_atributo() << "  FD: -1";
-    else if(subraiz->get_pmenor()==NULL)
-        cout << endl << "No: " << subraiz->get_patual()->get_atributo() << "  FE: -1" << "  FD: " << subraiz->get_pmaior()->get_patual()->get_atributo();
-    else
-        cout << endl << "No: " << subraiz->get_patual()->get_atributo() << "  FE: " << subraiz->get_pmenor()->get_patual()->get_atributo() << "  FD: " << subraiz->get_pmaior()->get_patual()->get_atributo();
+            //cout << "No: " << subraiz->get_patual()->get_atributo();
+            if(subraiz->get_pmenor()!=NULL)
+            {
+            tam++;
+            //cout << " FE: " << subraiz->get_pmenor()->get_patual()->get_atributo();
+            }
+            else
+            {
+            //cout << " FE: -1";
+            }
 
-    //PERCORRER OS DEMAIS EM PRÉ-ORDEM
+            if(subraiz->get_pmaior()!=NULL)
+            {
+            tam++;
+            //cout << "FD: " << subraiz->get_pmaior()->get_patual()->get_atributo() << endl;
+            }
+            else
+            {
+            //cout << "FD: -1" << endl;
+            }
+
+
+
+    //PERCORRER OS DEMAIS EM PRÃ‰-ORDEM
     if(subraiz->get_pmenor()!=NULL)
         percorrer_preordem(subraiz->get_pmenor());
     if(subraiz->get_pmaior()!=NULL)
         percorrer_preordem(subraiz->get_pmaior());
+        cout << "Tam " << tam << endl;
+
 }
 
 void Arvore::remove_node(int in)
@@ -152,8 +188,8 @@ void Arvore::remove_node(int in)
 
 void Arvore::insert_node(int in)
 {
-    Coisa* valor;
-    valor = new Coisa();
+    Teste* valor;
+    valor = new Teste();
     valor->set_atributo(in);
     Node* nodein;
     nodein=new Node();
@@ -194,7 +230,7 @@ void Arvore::insert_node(int in)
                 }//--Fim else
         }//Fim if menor
 
-        else{//--São iguais!
+        else{//--SÃ£o iguais!
         SUCESSO=true;
         }
       }while(SUCESSO==false);
