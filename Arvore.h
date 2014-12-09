@@ -7,14 +7,17 @@ using namespace std;
 
 class Arvore{
       private:
-              Node* raiz;
-              void percorrer_preordem(Node* subraiz);
+                Node* raiz;
+                int tam;
+                void percorrer_preordem(Node* subraiz);
+                void contar_arvore(Node* subraiz);
       public:
               Arvore(){raiz=NULL;}
               ~Arvore(){}
-              void insert_node(int in);
-              void remove_node(int in);
-              void print_tree();
+
+                void insert_node(int in);
+                void remove_node(int in);
+                void print_tree();
 };
 
 #endif
