@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1386048202 source:c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\coisa.cpp
+
+1386070687 source:c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\node.cpp
+	"Node.h"
+
+1384234578 source:c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\main.cpp
+	"Principal.h"
+
+1386074536 c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\principal.h
+	"Arvore.h"
+
+1386074777 c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\arvore.h
+	<stdlib.h>
+	<iostream>
+	"Node.h"
+
+1386078453 source:c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\arvore.cpp
+	"Arvore.h"
+
+1386075540 c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\node.h
+	"Coisa.h"
+	<stdlib.h>
+
+1386075588 c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\coisa.h
+
+1386076635 source:c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\principal.cpp
+	"Principal.h"
+	"Coisa.h"
+	<iostream>
+
+1384238178 source:c:\users\marlon prudente\desktop\arvores_cdb\main.cpp
+	"Principal.h"
+
+1418093923 c:\users\marlon prudente\desktop\arvores_cdb\principal.h
+	"Arvore.h"
+
+1418093923 c:\users\marlon prudente\desktop\arvores_cdb\arvore.h
+	<stdlib.h>
+	<iostream>
+	"Node.h"
+
+1418094331 c:\users\marlon prudente\desktop\arvores_cdb\node.h
+	"Coisa.h"
+	<stdlib.h>
+
+1386079188 c:\users\marlon prudente\desktop\arvores_cdb\coisa.h
+
+1386074287 source:c:\users\marlon prudente\desktop\arvores_cdb\node.cpp
+	"Node.h"
+
+1386080235 source:c:\users\marlon prudente\desktop\arvores_cdb\principal.cpp
+	"Principal.h"
+	"Coisa.h"
+	<iostream>
+
+1386082326 source:c:\users\marlon prudente\desktop\arvores_cdb\arvore.cpp
+	"Arvore.h"
+
