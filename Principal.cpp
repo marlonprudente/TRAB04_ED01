@@ -8,7 +8,6 @@ Principal::Principal(){
 
 void Principal::executar(){
 	int op;
-
 		cout << endl;
 		cout << "1 - Inserir elemento na arvore" << endl;
 		cout << "2 - Remoção de objeto da arvore" << endl;

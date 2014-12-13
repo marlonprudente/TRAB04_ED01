@@ -53,7 +53,7 @@ void Arvore::print_tree()
              if(temp->get_pmaior()!=NULL)
              {
                 lista.push(temp->get_pmaior());
-                cout << " No: " << temp->get_pmaior()->get_dados();
+                cout << "No: " << temp->get_pmaior()->get_dados();
                 if(temp->get_pmaior()->get_pmenor()!=NULL)
                 {
                      cout << " FE: " << raiz->get_pmaior()->get_pmenor()->get_dados();
@@ -81,6 +81,7 @@ void Arvore::print_tree()
         cout << endl << "Arvore Vazia." << endl;
     }
 }
+
 void Arvore::remove_node(int in)
 {
     if(raiz==NULL)
@@ -190,26 +191,22 @@ void Arvore::remove_node(int in)
 
 void Arvore::insert_node(int in)
 {
-    //Teste* valor;
-    //valor = new Teste();
-    //valor->set_atributo(in);
     Node* nodein;
-    nodein=new Node();
+    nodein = new Node();
     nodein->set_dados(in);
-    Node* aux=raiz;
+    Node* aux = raiz;
     bool SUCESSO=false;
 
-
     if(raiz==NULL)
-    {//--If mestre
+    {
         raiz=nodein;
-    }//--fim if mestre
+    }
     else
-    {//-Else mestre
+    {
       do
       {
-        if(in>aux->get_dados())
-        {//if maior
+        if(nodein->get_dados()>aux->get_dados())
+        {
             if(aux->get_pmaior()==NULL)
             {
                 SUCESSO=true;
@@ -217,26 +214,27 @@ void Arvore::insert_node(int in)
             }
             else{
                 aux=aux->get_pmaior();
-                }//-fim else
-        }//Fim if maior
+                }
+        }
 
-        else if(in<aux->get_dados()){//menor
-            if(aux->get_pmenor()==NULL)
+         if(nodein->get_dados()<aux->get_dados())
             {
+            if(aux->get_pmenor()==NULL)
+                {
                 SUCESSO=true;
                 aux->set_pmenor(nodein);
-            }
+                }
             else{
                 aux=aux->get_pmenor();
 
-                }//--Fim else
-        }//Fim if menor
+                }
+            }
 
-        else{//--São iguais!
+        else
+        {
         SUCESSO=true;
         }
       }while(SUCESSO==false);
-    }//--Fim do elsemestre
-
+    }
 }
 

@@ -66,8 +66,7 @@
 	<iostream>
 	"Node.h"
 
-1418446951 c:\users\marlon prudente\documents\netbeansprojects\proj04\node.h
-	"Teste.h"
+1418447652 c:\users\marlon prudente\documents\netbeansprojects\proj04\node.h
 	<stdlib.h>
 
 1418442697 c:\users\marlon prudente\documents\netbeansprojects\proj04\teste.h
@@ -83,8 +82,7 @@
 1418447533 source:c:\users\marlon prudente\documents\netbeansprojects\proj04\node.cpp
 	"Node.h"
 
-1418444421 source:c:\users\marlon prudente\documents\netbeansprojects\proj04\principal.cpp
+1418448186 source:c:\users\marlon prudente\documents\netbeansprojects\proj04\principal.cpp
 	"Principal.h"
-	"Teste.h"
 	<iostream>
 
