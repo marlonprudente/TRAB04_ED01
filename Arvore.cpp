@@ -109,17 +109,17 @@ void Arvore::remove_node(int in)
         }
         if(aux==raiz)
         {
-            if(aux->get_pmaior()==NULL && aux->get_pmenor()==NULL) //SE EH UMA FOLHA
+            if(aux->get_pmaior()==NULL && aux->get_pmenor()==NULL) //SE E UMA FOLHA
             {
                 delete aux;
                 raiz=NULL;
             }
-            else if(aux->get_pmaior()==NULL) // SE SOH TEM FOLHAS A ESQUERDA
+            else if(aux->get_pmaior()==NULL) // SE SO TEM FOLHAS A ESQUERDA
             {
                 raiz=aux->get_pmenor();
                 delete aux;
             }
-            else if(aux->get_pmenor()==NULL) // SE SOH TEM FOLHAS A DIREITA
+            else if(aux->get_pmenor()==NULL) // SE SO TEM FOLHAS A DIREITA
             {
                 raiz=aux->get_pmaior();
                 delete aux;
