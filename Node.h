@@ -5,7 +5,7 @@
 
 class Node{
         private:
-                int patual;
+                Teste* patual;
                 Node* pmenor;
                 Node* pmaior;
         public:
