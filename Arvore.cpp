@@ -217,16 +217,16 @@ void Arvore::insert_node(int in)
                 }
         }
 
-         if(nodein->get_dados()<aux->get_dados())
+        else if(nodein->get_dados()<aux->get_dados())
             {
             if(aux->get_pmenor()==NULL)
                 {
                 SUCESSO=true;
                 aux->set_pmenor(nodein);
                 }
+
             else{
                 aux=aux->get_pmenor();
-
                 }
             }
 
@@ -234,6 +234,7 @@ void Arvore::insert_node(int in)
         {
         SUCESSO=true;
         }
+
       }while(SUCESSO==false);
     }
 }
