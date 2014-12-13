@@ -8,9 +8,6 @@ using namespace std;
 class Arvore{
       private:
                 Node* raiz;
-                int tam;
-                void percorrer_preordem(Node* subraiz);
-                void contar_arvore(Node* subraiz);
       public:
               Arvore(){raiz=NULL;}
               ~Arvore(){}

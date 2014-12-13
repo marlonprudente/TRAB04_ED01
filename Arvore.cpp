@@ -6,10 +6,10 @@ void Arvore::print_tree()
     if(raiz!=NULL)
     {
          lista.push(raiz);
-         cout << "Raiz: " << raiz->get_patual()->get_atributo();
+         cout << "Raiz: " << raiz->get_dados();
          if(raiz->get_pmenor()!=NULL)
          {
-             cout << " FE: " << raiz->get_pmenor()->get_patual()->get_atributo();
+             cout << " FE: " << raiz->get_pmenor()->get_dados();
          }
          else
          {
@@ -18,7 +18,7 @@ void Arvore::print_tree()
 
          if(raiz->get_pmaior()!=NULL)
          {
-            cout << " FD: " << raiz->get_pmaior()->get_patual()->get_atributo() << "\n";
+            cout << " FD: " << raiz->get_pmaior()->get_dados() << "\n";
          }
          else
          {
@@ -31,10 +31,10 @@ void Arvore::print_tree()
              if(temp->get_pmenor()!=NULL)
              {
                  lista.push(temp->get_pmenor());
-                 cout << "No: " << temp->get_pmenor()->get_patual()->get_atributo();
+                 cout << "No: " << temp->get_pmenor()->get_dados();
                  if(temp->get_pmenor()->get_pmenor()!=NULL)
                  {
-                     cout << " FE: " << raiz->get_pmenor()->get_pmenor()->get_patual()->get_atributo();
+                     cout << " FE: " << raiz->get_pmenor()->get_pmenor()->get_dados();
                  }
                  else
                  {
@@ -42,7 +42,7 @@ void Arvore::print_tree()
                  }
                  if(temp->get_pmenor()->get_pmaior()!=NULL)
                  {
-                     cout << " FD: " << raiz->get_pmenor()->get_pmaior()->get_patual()->get_atributo() << "\n";
+                     cout << " FD: " << raiz->get_pmenor()->get_pmaior()->get_dados() << "\n";
                  }
                  else
                  {
@@ -53,10 +53,10 @@ void Arvore::print_tree()
              if(temp->get_pmaior()!=NULL)
              {
                 lista.push(temp->get_pmaior());
-                cout << " No: " << temp->get_pmaior()->get_patual()->get_atributo();
+                cout << " No: " << temp->get_pmaior()->get_dados();
                 if(temp->get_pmaior()->get_pmenor()!=NULL)
                 {
-                     cout << " FE: " << raiz->get_pmaior()->get_pmenor()->get_patual()->get_atributo();
+                     cout << " FE: " << raiz->get_pmaior()->get_pmenor()->get_dados();
                  }
                  else
                  {
@@ -64,7 +64,7 @@ void Arvore::print_tree()
                  }
                 if(temp->get_pmaior()->get_pmaior()!=NULL)
                  {
-                     cout << " FD: " << raiz->get_pmaior()->get_pmaior()->get_patual()->get_atributo() << "\n";
+                     cout << " FD: " << raiz->get_pmaior()->get_pmaior()->get_dados() << "\n";
                  }
                  else
                  {
@@ -81,47 +81,6 @@ void Arvore::print_tree()
         cout << endl << "Arvore Vazia." << endl;
     }
 }
-
-
-void Arvore::contar_arvore(Node* subraiz)
-{
-            tam++;
-            if(subraiz->get_pmenor()!=NULL)
-            {
-            tam++;
-            }
-            if(subraiz->get_pmaior()!=NULL)
-            {
-            tam++;
-            }
-
-    //PERCORRER OS DEMAIS EM PRÉ-ORDEM
-    if(subraiz->get_pmenor()!=NULL)
-        contar_arvore(subraiz->get_pmenor());
-    if(subraiz->get_pmaior()!=NULL)
-        contar_arvore(subraiz->get_pmaior());
-}
-
-void Arvore::percorrer_preordem(Node* subraiz)
-{
-            if(subraiz->get_pmenor()!=NULL)
-            {
-            tam++;
-            }
-            if(subraiz->get_pmaior()!=NULL)
-            {
-            tam++;
-            }
-
-    //PERCORRER OS DEMAIS EM PRÉ-ORDEM
-    if(subraiz->get_pmenor()!=NULL)
-        percorrer_preordem(subraiz->get_pmenor());
-    if(subraiz->get_pmaior()!=NULL)
-        percorrer_preordem(subraiz->get_pmaior());
-        cout << "Tam " << tam << endl;
-
-}
-
 void Arvore::remove_node(int in)
 {
     if(raiz==NULL)
@@ -134,17 +93,17 @@ void Arvore::remove_node(int in)
         Node* antecessor=raiz;
         while(aux!=NULL)
         {
-            if(in>aux->get_patual()->get_atributo())
+            if(in>aux->get_dados())
             {
                 antecessor=aux;
                 aux=aux->get_pmaior();
             }
-            else if(in<aux->get_patual()->get_atributo())
+            else if(in<aux->get_dados())
             {
                 antecessor=aux;
                 aux=aux->get_pmenor();
             }
-            else if(in==aux->get_patual()->get_atributo())
+            else if(in==aux->get_dados())
                 break;
         }
         if(aux==raiz)
@@ -177,14 +136,14 @@ void Arvore::remove_node(int in)
                     antecessor->set_pmaior(aux2->get_pmenor());
                 if(antecessor->get_pmenor()==aux2)
                     antecessor->set_pmenor(aux2->get_pmenor());
-                aux->set_patual(aux2->get_patual());
+                aux->set_dados(aux2->get_dados());
 
                 delete aux2;
             }
         }
         else if(aux!=NULL)
         {
-            if(aux->get_pmaior()==NULL && aux->get_pmenor()==NULL) //SE EH UMA FOLHA
+            if(aux->get_pmaior()==NULL && aux->get_pmenor()==NULL) //SE E UMA FOLHA
             {
                 if(antecessor->get_pmaior()==aux)
                     antecessor->set_pmaior(NULL);
@@ -192,7 +151,7 @@ void Arvore::remove_node(int in)
                     antecessor->set_pmenor(NULL);
                 delete aux;
             }
-            else if(aux->get_pmaior()==NULL) // SE SOH TEM FOLHAS A ESQUERDA
+            else if(aux->get_pmaior()==NULL) // SE SO TEM FOLHAS A ESQUERDA
             {
                 if(antecessor->get_pmaior()==aux)
                     antecessor->set_pmaior(aux->get_pmenor());
@@ -200,7 +159,7 @@ void Arvore::remove_node(int in)
                     antecessor->set_pmenor(aux->get_pmenor());
                 delete aux;
             }
-            else if(aux->get_pmenor()==NULL) // SE SOH TEM FOLHAS A DIREITA
+            else if(aux->get_pmenor()==NULL) // SE SO TEM FOLHAS A DIREITA
             {
                 if(antecessor->get_pmaior()==aux)
                     antecessor->set_pmaior(aux->get_pmaior());
@@ -221,7 +180,7 @@ void Arvore::remove_node(int in)
                     antecessor->set_pmaior(aux2->get_pmenor());
                 if(antecessor->get_pmenor()==aux2)
                     antecessor->set_pmenor(aux2->get_pmenor());
-                aux->set_patual(aux2->get_patual());
+                aux->set_dados(aux2->get_dados());
                 delete aux2;
             }
         }
@@ -231,12 +190,12 @@ void Arvore::remove_node(int in)
 
 void Arvore::insert_node(int in)
 {
-    Teste* valor;
-    valor = new Teste();
-    valor->set_atributo(in);
+    //Teste* valor;
+    //valor = new Teste();
+    //valor->set_atributo(in);
     Node* nodein;
     nodein=new Node();
-    nodein->set_patual(valor);
+    nodein->set_dados(in);
     Node* aux=raiz;
     bool SUCESSO=false;
 
@@ -249,7 +208,7 @@ void Arvore::insert_node(int in)
     {//-Else mestre
       do
       {
-        if(in>aux->get_patual()->get_atributo())
+        if(in>aux->get_dados())
         {//if maior
             if(aux->get_pmaior()==NULL)
             {
@@ -261,7 +220,7 @@ void Arvore::insert_node(int in)
                 }//-fim else
         }//Fim if maior
 
-        else if(in<aux->get_patual()->get_atributo()){//menor
+        else if(in<aux->get_dados()){//menor
             if(aux->get_pmenor()==NULL)
             {
                 SUCESSO=true;

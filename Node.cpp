@@ -1,12 +1,12 @@
 #include "Node.h"
 
-void Node::set_patual(Teste* in)
+void Node::set_dados(int in)
 {
-    patual=in;
+    dados=in;
 }
-Teste* Node::get_patual()
+int Node::get_dados()
 {
-    return patual;
+    return dados;
 }
 
 void Node::set_pmenor(Node* in)

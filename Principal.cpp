@@ -1,5 +1,4 @@
 #include "Principal.h"
-#include "Teste.h"
 #include <iostream>
 using namespace std;
 
