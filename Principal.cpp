@@ -1,5 +1,5 @@
 #include "Principal.h"
-#include "Coisa.h"
+#include "Teste.h"
 #include <iostream>
 using namespace std;
 

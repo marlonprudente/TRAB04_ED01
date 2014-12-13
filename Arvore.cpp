@@ -2,30 +2,87 @@
 #include <queue>
 void Arvore::print_tree()
 {
-
+    queue<Node*> lista;
     if(raiz!=NULL)
     {
-        tam = 1;
-        if(raiz->get_pmenor()!=NULL)
-            contar_arvore(raiz->get_pmenor());
+         lista.push(raiz);
+         cout << "Raiz: " << raiz->get_patual()->get_atributo();
+         if(raiz->get_pmenor()!=NULL)
+         {
+             cout << " FE: " << raiz->get_pmenor()->get_patual()->get_atributo();
+         }
+         else
+         {
+             cout << " FE: -1";
+         }
 
-        if(raiz->get_pmaior()!=NULL)
-            contar_arvore(raiz->get_pmaior());
+         if(raiz->get_pmaior()!=NULL)
+         {
+            cout << " FD: " << raiz->get_pmaior()->get_patual()->get_atributo() << "\n";
+         }
+         else
+         {
+             cout << " FD: -1\n";
+         }
+         Node *temp = new Node();
+         temp = raiz;
+         while(!lista.empty())
+         {
+             if(temp->get_pmenor()!=NULL)
+             {
+                 lista.push(temp->get_pmenor());
+                 cout << "No: " << temp->get_pmenor()->get_patual()->get_atributo();
+                 if(temp->get_pmenor()->get_pmenor()!=NULL)
+                 {
+                     cout << " FE: " << raiz->get_pmenor()->get_pmenor()->get_patual()->get_atributo();
+                 }
+                 else
+                 {
+                     cout << " FE: -1";
+                 }
+                 if(temp->get_pmenor()->get_pmaior()!=NULL)
+                 {
+                     cout << " FD: " << raiz->get_pmenor()->get_pmaior()->get_patual()->get_atributo() << "\n";
+                 }
+                 else
+                 {
+                    cout << " FD: -1 \n";
+                 }
 
+             }
+             if(temp->get_pmaior()!=NULL)
+             {
+                lista.push(temp->get_pmaior());
+                cout << " No: " << temp->get_pmaior()->get_patual()->get_atributo();
+                if(temp->get_pmaior()->get_pmenor()!=NULL)
+                {
+                     cout << " FE: " << raiz->get_pmaior()->get_pmenor()->get_patual()->get_atributo();
+                 }
+                 else
+                 {
+                     cout << " FE: -1";
+                 }
+                if(temp->get_pmaior()->get_pmaior()!=NULL)
+                 {
+                     cout << " FD: " << raiz->get_pmaior()->get_pmaior()->get_patual()->get_atributo() << "\n";
+                 }
+                 else
+                 {
+                    cout << " FD: -1 \n";
+                 }
+             }
+        lista.pop();
+        temp = lista.front();
+         }
 
     }
     else
     {
         cout << endl << "Arvore Vazia." << endl;
     }
-    int i;
-    Node vetor[tam];
-    for(i=0;i<tam;i++)
-    {
-        vetor[i] =
-    }
-
 }
+
+
 void Arvore::contar_arvore(Node* subraiz)
 {
             tam++;
@@ -47,28 +104,14 @@ void Arvore::contar_arvore(Node* subraiz)
 
 void Arvore::percorrer_preordem(Node* subraiz)
 {
-            //cout << "No: " << subraiz->get_patual()->get_atributo();
             if(subraiz->get_pmenor()!=NULL)
             {
             tam++;
-            //cout << " FE: " << subraiz->get_pmenor()->get_patual()->get_atributo();
             }
-            else
-            {
-            //cout << " FE: -1";
-            }
-
             if(subraiz->get_pmaior()!=NULL)
             {
             tam++;
-            //cout << "FD: " << subraiz->get_pmaior()->get_patual()->get_atributo() << endl;
             }
-            else
-            {
-            //cout << "FD: -1" << endl;
-            }
-
-
 
     //PERCORRER OS DEMAIS EM PRÉ-ORDEM
     if(subraiz->get_pmenor()!=NULL)

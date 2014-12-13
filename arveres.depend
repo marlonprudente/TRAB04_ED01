@@ -57,3 +57,34 @@
 1386082326 source:c:\users\marlon prudente\desktop\arvores_cdb\arvore.cpp
 	"Arvore.h"
 
+1418446319 source:c:\users\marlon prudente\documents\netbeansprojects\proj04\arvore.cpp
+	"Arvore.h"
+	<queue>
+
+1418442697 c:\users\marlon prudente\documents\netbeansprojects\proj04\arvore.h
+	<stdlib.h>
+	<iostream>
+	"Node.h"
+
+1418445057 c:\users\marlon prudente\documents\netbeansprojects\proj04\node.h
+	"Teste.h"
+	<stdlib.h>
+
+1418442697 c:\users\marlon prudente\documents\netbeansprojects\proj04\teste.h
+
+1386051802 source:c:\users\marlon prudente\documents\netbeansprojects\proj04\coisa.cpp
+
+1384238178 source:c:\users\marlon prudente\documents\netbeansprojects\proj04\main.cpp
+	"Principal.h"
+
+1418093923 c:\users\marlon prudente\documents\netbeansprojects\proj04\principal.h
+	"Arvore.h"
+
+1418445602 source:c:\users\marlon prudente\documents\netbeansprojects\proj04\node.cpp
+	"Node.h"
+
+1418444421 source:c:\users\marlon prudente\documents\netbeansprojects\proj04\principal.cpp
+	"Principal.h"
+	"Teste.h"
+	<iostream>
+

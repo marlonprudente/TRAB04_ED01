@@ -1,10 +1,10 @@
 #include "Node.h"
 
-void Node::set_patual(Coisa* in)
+void Node::set_patual(Teste* in)
 {
     patual=in;
 }
-Coisa* Node::get_patual()
+Teste* Node::get_patual()
 {
     return patual;
 }
