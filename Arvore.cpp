@@ -34,7 +34,7 @@ void Arvore::print_tree()
                  cout << "No: " << temp->get_pmenor()->get_dados();
                  if(temp->get_pmenor()->get_pmenor()!=NULL)
                  {
-                     cout << " FE: " << raiz->get_pmenor()->get_pmenor()->get_dados();
+                     cout << " FE: " << temp->get_pmenor()->get_pmenor()->get_dados();
                  }
                  else
                  {
@@ -42,7 +42,7 @@ void Arvore::print_tree()
                  }
                  if(temp->get_pmenor()->get_pmaior()!=NULL)
                  {
-                     cout << " FD: " << raiz->get_pmenor()->get_pmaior()->get_dados() << "\n";
+                     cout << " FD: " << temp->get_pmenor()->get_pmaior()->get_dados() << "\n";
                  }
                  else
                  {
@@ -56,7 +56,7 @@ void Arvore::print_tree()
                 cout << "No: " << temp->get_pmaior()->get_dados();
                 if(temp->get_pmaior()->get_pmenor()!=NULL)
                 {
-                     cout << " FE: " << raiz->get_pmaior()->get_pmenor()->get_dados();
+                     cout << " FE: " << temp->get_pmaior()->get_pmenor()->get_dados();
                  }
                  else
                  {
@@ -64,7 +64,7 @@ void Arvore::print_tree()
                  }
                 if(temp->get_pmaior()->get_pmaior()!=NULL)
                  {
-                     cout << " FD: " << raiz->get_pmaior()->get_pmaior()->get_dados() << "\n";
+                     cout << " FD: " << temp->get_pmaior()->get_pmaior()->get_dados() << "\n";
                  }
                  else
                  {
