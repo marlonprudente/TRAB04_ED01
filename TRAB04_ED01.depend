@@ -1,34 +1,4 @@
 # depslib dependency file v1.0
-1386048202 source:c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\coisa.cpp
-
-1386070687 source:c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\node.cpp
-	"Node.h"
-
-1384234578 source:c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\main.cpp
-	"Principal.h"
-
-1386074536 c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\principal.h
-	"Arvore.h"
-
-1386074777 c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\arvore.h
-	<stdlib.h>
-	<iostream>
-	"Node.h"
-
-1386078453 source:c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\arvore.cpp
-	"Arvore.h"
-
-1386075540 c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\node.h
-	"Coisa.h"
-	<stdlib.h>
-
-1386075588 c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\coisa.h
-
-1386076635 source:c:\users\rodrigo\documents\3periodo\estruturas\projetos\arvores_cdb\principal.cpp
-	"Principal.h"
-	"Coisa.h"
-	<iostream>
-
 1384238178 source:c:\users\marlon prudente\desktop\arvores_cdb\main.cpp
 	"Principal.h"
 
@@ -86,3 +56,27 @@
 	"Principal.h"
 	<iostream>
 
+1418446305 source:/home/todos/alunos/ct/a1562339/NetBeansProjects/proj04-master/main.cpp
+	"Principal.h"
+
+1418446305 /home/todos/alunos/ct/a1562339/NetBeansProjects/proj04-master/Principal.h
+	"Arvore.h"
+
+1418446305 /home/todos/alunos/ct/a1562339/NetBeansProjects/proj04-master/Arvore.h
+	<stdlib.h>
+	<iostream>
+	"Node.h"
+
+1418446305 /home/todos/alunos/ct/a1562339/NetBeansProjects/proj04-master/Node.h
+	<stdlib.h>
+
+1418446305 source:/home/todos/alunos/ct/a1562339/NetBeansProjects/proj04-master/Node.cpp
+	"Node.h"
+
+1418446305 source:/home/todos/alunos/ct/a1562339/NetBeansProjects/proj04-master/Principal.cpp
+	"Principal.h"
+	<iostream>
+
+1418729660 source:/home/todos/alunos/ct/a1562339/NetBeansProjects/proj04-master/Arvore.cpp
+	"Arvore.h"
+	<queue>
